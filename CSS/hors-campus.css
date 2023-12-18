@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+#monImage {
+    width: 100%; 
+      margin-top: 105px; 
+    object-fit: cover; 
+	position: fixed;
+}
+
+/* Ajoutez ce code à votre fichier webapp.css */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black ;
+  background-size: cover;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white; /* Choisissez une couleur qui contraste bien avec votre image de fond */
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (orientation: landscape) {
+    .alert {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+.alert {
+    position: fixed;
+    top: 5%;
+    right: 0%;
+    background: #111;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+    border-radius: 10px;
+    transform: translateX(150%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.alert .navigation1 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+}
+
+.alert .navigation1 li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.alert .navigation li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.alert p {
+    margin: 25px;
+    letter-spacing: 1px;
+}
+
+.alert i {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 20px 60px;
+    background: #111;
+    position: fixed;
+    border-bottom: 1px solid #aaa;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 60px;
+    list-style: none;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header .navigation li a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+header .hamburger {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media(max-width:991px) {
+    header .navigation {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+}
+
+
+/* Ajoutez ceci à votre fichier webapp.css */
+.banner-responsive {
+  width: 100%;
+  height: 106vh; /* La hauteur est un pourcentage de la vue verticale de l'écran */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px; /* Espace entre les bannières */
+}
+
+#banner1 {
+  background-image: url('../Image/1.png');
+}
+
+#banner2 {
+  background-image: url('../Image/2.png');
+}
+
+#banner3 {
+  background-image: url('../Image/3.png');
+}
+
+/* Media queries pour ajuster la hauteur de la bannière sur différents appareils */
+@media (max-width: 768px) {
+  .banner-responsive {
+    height: 87vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-responsive {
+    height: 27vh;
+  }
+}
+
+
+/* Ajoutez ou modifiez le code existant dans votre fichier webapp.css */
+.background-image {
+    background-image: url('aaa.png'); /* Assurez-vous que le chemin vers votre image est correct */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* L'image de fond reste fixe lors du défilement */
+    height: 100vh; /* Ajustez la hauteur selon vos besoins */
+    z-index: 1; /* S'assure que l'image de fond est derrière tout contenu posé dessus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Définit la couleur de texte par défaut pour tous les éléments enfants à blanc */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.content-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Un fond semi-transparent pour augmenter le contraste du texte */
+    padding: 20px;
+    border-radius: 10px; /* Ajoute des coins arrondis au conteneur */
+    max-width: 800px; /* La largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le conteneur dans la bannière */
+    width: 100%; /* Assure que le conteneur remplit la largeur jusqu'à 800px */
+    box-sizing: border-box; /* S'assure que le padding ne dépasse pas la largeur maximale */
+}
+
+/* Stylisation du titre h1 */
+h1 {
+    margin-bottom: 0.5em; /* Espace en dessous du titre */
+    font-size: 2em; /* Taille de la police du titre */
+}
+
+/* Stylisation du paragraphe */
+p {
+    font-size: 1em; /* Taille de la police du paragraphe */
+}
+
+/* Répondre au changement de la taille de l'écran */
+@media (max-width: 768px) {
+    .background-image {
+        height: 50vh; /* Hauteur plus petite pour les écrans plus petits */
+    }
+
+    .content-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Taille de la police plus petite pour les écrans plus petits */
+    }
+
+    p {
+        font-size: 0.9em; /* Taille de la police plus petite pour les écrans plus petits */
+    }
+}
